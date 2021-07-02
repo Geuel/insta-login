@@ -1,3 +1,20 @@
+:root {
+  /* --main-bg-color: #f3f3f3;
+  --group-bg-color: #fff;
+  --group-border-color: #d3d3d3;
+  --button-primary-bg-color: #0095f6;
+  --button-primary-text-color: #fff;
+  --button-secondary-text-color: #0095f6; */
+
+  /*  Dark Mode*/
+  --main-bg-color: #212226;
+  --group-bg-color: #424242;
+  --group-border-color: #f3f3f3;
+  --button-primary-bg-color: #a7226f;
+  --button-primary-text-color: #fff;
+  --button-secondary-text-color: #f46c3f;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -10,12 +27,13 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: rgb(243, 243, 243);
+  background-color: var(--main-bg-color);
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--button-primary-text-color);
 }
 
 .instagram-wrapper {
@@ -52,7 +70,6 @@ body {
   flex-direction: column;
   width: 50%;
   max-width: 18.75rem;
-  min-width: 7.5rem;
 }
 
 .group {
@@ -60,11 +77,11 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background-color: #fff;
+  background-color: var(--group-bg-color);
   width: 100%;
   padding: 1.3rem 0;
   margin-bottom: 0.625rem;
-  border: 0.0625rem solid lightgray;
+  border: 0.0625rem solid var(--group-border-color);
 }
 
 .instagram-logo {
@@ -73,7 +90,7 @@ body {
 }
 
 .group:nth-child(1) {
-  min-height: 10rem;
+  min-height: 17rem;
 }
 
 .profile-photo {
@@ -89,23 +106,23 @@ body {
 }
 
 .instagram-login {
-  background-color: #0095f6;
-  color: #fff;
+  background-color: var(--button-primary-bg-color);
+  color: var(--button-primary-text-color);
   padding: 0.5rem;
   border-radius: 0.25rem;
 }
 
 .instagram-logout {
-  color: #0095f6;
+  color: var(--button-secondary-text-color);
   margin-top: 1rem;
 }
 
 .not-account {
-  color: rgb(160, 160, 160);
+  color: var(--button-primary-text-color);
 }
 
 .link-blue {
-  color: #0095f6;
+  color: var(--button-secondary-text-color);
 }
 
 .get-the-app {
@@ -129,10 +146,11 @@ body {
   width: 7rem;
   height: 2rem;
   background-size: cover;
+  border-radius: 0.3125rem;
 }
 
 .app-download:nth-child(1) {
-  background-image: url(./assets/./apple-button.png);
+  background-image: url(./assets/apple-button.png);
 }
 
 .app-download:nth-child(2) {
@@ -149,7 +167,7 @@ body {
 
 @media (max-width: 650px) {
   body {
-    background-color: #fff;
+    background-color: var(--group-bg-color);
   }
 
   .instagram-wrapper {
